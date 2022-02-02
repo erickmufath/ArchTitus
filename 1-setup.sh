@@ -155,6 +155,8 @@ echo -ne "
                     Adding User
 -------------------------------------------------------------------------
 "
+echo "========== Enter Root Pass : "
+passwd
 if [ $(whoami) = "root"  ]; then
     groupadd libvirt
     useradd -m -G wheel,libvirt -s /bin/bash $USERNAME 
