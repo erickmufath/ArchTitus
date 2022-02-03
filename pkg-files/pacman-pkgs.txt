@@ -150,3 +150,7 @@ lsp-plugins
 pulsemixer
 alsa-utils
 alsa-plugins
+
+wine-gecko
+wine-mono
+winetricks
