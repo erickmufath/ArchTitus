@@ -1,1 +1,12 @@
-
+timeshift
+zramd
+rar
+ventoy-bin
+aic94xx-firmware
+wd719x-firmware
+upd72020x-fw
+nerd-fonts-source-code-pro
+ttf-droid
+ttf-hack
+ttf-meslo
+ttf-roboto
