@@ -38,6 +38,8 @@ for PACKAGE in $(cat ~/ArchTitus/pkg-files/aur-pkgs.txt) do
   addAUR $PACKAGE
 esac
 
+yay -S --noconfirm --needed - < ~/ArchTitus/pkg-files/aur-pkgs.txt
+
 export PATH=$PATH:~/.local/bin
 cp -r ~/ArchTitus/dotfiles/* ~/.config/
 echo -ne "
