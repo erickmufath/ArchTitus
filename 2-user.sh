@@ -38,6 +38,7 @@ for PACKAGE in $(cat ~/ArchTitus/pkg-files/aur-pkgs.txt) do
   addAUR $PACKAGE
 esac
 
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 yay -S --noconfirm --needed - < ~/ArchTitus/pkg-files/aur-pkgs.txt
 
 export PATH=$PATH:~/.local/bin
