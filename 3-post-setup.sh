@@ -39,11 +39,8 @@ echo -ne "
                     Cleaning 
 -------------------------------------------------------------------------
 "
-# Add sudo no password rights
-sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
-
-# Add sudo rights
-sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+EDITOR=nano visudo
+mkinitcpio -p linux
 
 rm -r /root/ArchTitus
 rm -r /home/$USERNAME/ArchTitus
