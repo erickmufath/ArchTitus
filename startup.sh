@@ -108,37 +108,6 @@ read -p "Your key boards layout:" keymap
 set_option KEYMAP $keymap
 }
 
-aurHelper () {
-echo -ne "
-Pick your AUR helper:
-    1) yay
-    2) paru
-    3) other
-    4) none
-"
-read -p "AUR helper: " aurHelperNum
-case $aurHelperNum in
-    "1")
-        set_option AURHELPER "yay"
-    ;;
-    "2")
-        set_option AURHELPER "paru"
-    ;;
-    "3")
-        read -p "AUR helper (must be packadge in AUR): " aurHelper
-        set_option AURHELPER aurHelper
-    ;;
-    "4")
-        set_option aurHelper ""
-    ;;
-    *)
-        echo ""
-        echo "that is a invalid option"
-        aurHelper
-    ;;
-esac
-}
-
 drivessd () {
 echo -ne "
 Is this an ssd? yes/no:
